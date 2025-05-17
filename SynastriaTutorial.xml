@@ -1,0 +1,46 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+  <Frame name="SynastriaTutorialFrame" parent="UIParent" inherits="UIPanelDialogTemplate" hidden="true" frameStrata="DIALOG" enableMouse="true" movable="true">
+
+  <Anchors>
+    <Anchor point="CENTER" x="0" y="220"/>
+  </Anchors>
+  <Layers>
+    <Layer level="ARTWORK">
+      <FontString name="$parentTitle" inherits="GameFontNormal" justifyH="CENTER">
+        <Size><AbsDimension x="270" y="24"/></Size>
+        <Anchors>
+          <Anchor point="TOP" x="0" y="-12"/>
+        </Anchors>
+        <Text>Tutorial</Text>
+      </FontString>
+      <FontString name="$parentText" inherits="GameFontHighlight" justifyH="LEFT">
+        <Size><AbsDimension x="270" y="0"/></Size>
+        <Anchors>
+          <Anchor point="TOPLEFT" x="25" y="-40"/>
+        </Anchors>
+      </FontString>
+    </Layer>
+  </Layers>
+  <Frames>
+    <Button name="$parentNextButton" inherits="UIPanelButtonTemplate">
+      <Size><AbsDimension x="120" y="30"/></Size>
+      <Anchors>
+        <Anchor point="BOTTOM" x="0" y="20"/>
+      </Anchors>
+      <Text>Next</Text>
+    </Button>
+    <Button name="$parentCloseButton" inherits="UIPanelCloseButton">
+      <Anchors>
+        <Anchor point="TOPRIGHT" x="-5" y="-5"/>
+      </Anchors>
+    </Button>
+  </Frames>
+  <Scripts>
+    <OnShow>PlaySound("igQuestLogOpen");</OnShow>
+    <OnHide>PlaySound("igQuestLogClose");</OnHide>
+    <OnMouseDown>self:StartMoving()</OnMouseDown>
+    <OnMouseUp>self:StopMovingOrSizing()</OnMouseUp>
+  </Scripts>
+  <ClampedToScreen>true</ClampedToScreen>
+</Frame>
+</Ui>

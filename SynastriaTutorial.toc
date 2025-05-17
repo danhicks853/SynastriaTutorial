@@ -1,0 +1,12 @@
+## Interface: 30300
+## Title: Synastria Tutorial
+## Notes: Guides new players through Synastria's systems
+## Author: YourName
+## Version: 0.1
+## SavedVariablesPerCharacter: SynastriaTutorial_Completed
+TriggerDef.lua
+ActionDef.lua
+PerkRecs.lua
+TutorialSteps.lua
+SynastriaTutorial.xml
+SynastriaTutorial.lua
